@@ -1,0 +1,27 @@
+extends:
+  - "eslint:recommended"
+  - "plugin:@typescript-eslint/recommended-type-checked"
+  - "plugin:@typescript-eslint/stylistic-type-checked"
+  - "plugin:vue/vue3-recommended"
+  - "@nuxtjs/eslint-config-typescript"
+  - "plugin:vuetify/recommended"
+  - "plugin:prettier/recommended"
+plugins:
+  - "@typescript-eslint"
+parser: "vue-eslint-parser"
+parserOptions:
+  parser: "@typescript-eslint/parser"
+  project: "./tsconfig.json"
+  extraFileExtensions:
+    - ".vue"
+  sourceType: "module"
+  ecmaVersion: "latest"
+  vueFeatures:
+    filter: false
+    interpolationAsNonHTML: true
+    styleCSSVariableInjection: true
+  rules:
+  "import/prefer-default-export": warn
+  "@typescript-eslint/no-unsafe-argument": warn
+  "@typescript-eslint/no-unsafe-assignment": warn
+  "@typescript-eslint/no-unsafe-call": warn
